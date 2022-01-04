@@ -1,0 +1,305 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+* {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+#app {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+}
+
+#app .info-content {
+    position: absolute;
+    top: 0%;
+    left: 90px;
+    width: 25%;
+    height: 100%;
+    border-right: 1px solid #e5e5e5;
+    z-index: 5;
+}
+#app .info-content .username {
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    width: 90%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+}
+#app .info-content .username .profile-photo {
+    position: relative;
+    width: 90px;
+    height: 90px;
+    background-color: #e5e5e5;
+    color: white;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+#app .info-content .username p {
+    font-size: 20px;
+    font-weight: 900;
+    color: #444;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+#app .info-content .username p:nth-child(3) {
+    font-size: 14px;
+    color: #c5c5c5;
+    font-weight: 300;
+    margin: 0;
+}
+#app .info-content .username .profile-photo i {
+    font-size: 110px;
+}
+
+#app .info-content .edit-user-btn {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 50%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+#app .info-content .edit-user-btn button {
+    position: relative;
+    width: auto;
+    height: 30px;
+    padding: 0 10px;
+    border-radius: 5px;
+    background-color: #f4f4f4;
+    color: #84adc3;
+    font-weight: bold;
+    font-size: 10px;
+    letter-spacing: 0.5px;
+    border: 0px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+#app .info-content .edit-user-btn button:hover {
+    background-color: #84adc3;
+    color: white;
+    transition: 0.3s;
+}
+#app .info-content .user-followers {
+    position: absolute;
+    top: 40%;
+    left: 0%;
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: row;
+}
+#app .info-content .user-followers .item {
+    position: relative;
+    width: 33%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#app .info-content .user-followers .item p {
+    margin: 0;
+    font-weight: 900;
+    font-size: 20px;
+}
+#app .info-content .user-followers .item p:nth-child(2) {
+    font-weight: 100;
+    font-size: 14px;
+    color: #c5c5c5;
+}
+
+#app .post-content {
+    position: absolute;
+    left: calc(25% + 90px);
+    width: calc(100% - 25% - 90px);
+    top: 0%;
+    height: 100%;
+    background-color: transparent;
+    z-index: 5;
+}
+#app .post-content .searchbar {
+    position: absolute;
+    top: 25px;
+    left: 50px;
+    width: 30%;
+    height: 35px;
+    padding: 0px 10px;
+    background-color: #f0eff5;
+    border-radius: 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: flex-start;
+}
+#app .post-content .searchbar i {
+    color: #999;
+}
+#app .post-content .searchbar input {
+    position: relative;
+    width: 100%;
+    background-color: transparent;
+    height: 100%;
+    border: 0px;
+    font-weight: 100;
+    color: #555;
+}
+
+#app .post-content .posts {
+    position: absolute;
+    top: 20%;
+    left: 0%;
+    width: 100%;
+    height: 80%;
+    overflow: hidden;
+    overflow-y: scroll;
+    background-color: transparent;
+}
+
+#app .post-content .posts h1 {
+    position: relative;
+    left: 5%;
+    font-size: 20px;
+}
+
+input, button {
+    outline: none;
+}
+.sidebar {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 90px;
+    height: 100%;
+    border-right: 1px solid #e5e5e5;
+    display:flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 5;
+}
+.sidebar .item-nav {
+    position: relative;
+    height: 33%;
+}
+.sidebar .title-logo {
+    position: relative;
+    height: 33%;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: flex-start;
+    margin-top: 10px;
+    font-size: 25px;
+    font-weight: 900;
+}
+.sidebar .nav {
+    position: relative;
+    height: 33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+}
+.sidebar .nav .link {
+    position: relative;
+    height: 75px;
+    text-decoration: none;
+    color: #999;
+    cursor: pointer;
+}
+
+.sidebar .user-items {
+    position: relative;
+    height: 33%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: flex-end;
+}
+.sidebar .user-items p {
+    position: relative;
+    width: 35px;
+    height: 35px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    background-color: #e5e5e5;
+    align-content: center;
+    align-items: center;
+    overflow: hidden;
+    cursor: pointer;
+}
+.sidebar .user-items p i {
+    color: white;
+    font-size: 45px;
+}
+
+#userbox {
+    position: absolute;
+    bottom: 60px;
+    left: 10px;
+    width: 150px;
+    height: 75px;
+    background-color: white;
+    box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.3);
+    z-index: 30;
+    display: flex;
+    border-radius: 5px;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+#userbox a {
+    position: relative;
+    height: 50%;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    color: #999;
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#userbox a:hover {
+    background-color: rgba(240, 239, 245, 0.48);
+}
+
+.boxing-of-header {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+}
